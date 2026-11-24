@@ -1,0 +1,132 @@
+
+/* =========================================
+   WAVE AUTH FORM TRANSITION
+   Centered Horizontal Slide
+========================================= */
+
+.auth-clean-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Area pergantian form */
+.auth-slider {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Kedua panel tetap berada di tengah */
+.auth-panel {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(0);
+
+  transition: none;
+
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Animasi hanya pada isi panel / kartu form */
+.auth-only-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 35px 20px;
+
+  transition:
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 300ms ease-out !important;
+
+  will-change: transform, opacity;
+}
+
+.auth-only-layout .form-section {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   LOGIN AKTIF
+========================================= */
+
+.auth-slider.show-login .login-panel {
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.auth-slider.show-login .login-panel .auth-only-layout {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.auth-slider.show-login .register-panel {
+  z-index: 1;
+}
+
+.auth-slider.show-login .register-panel .auth-only-layout {
+  transform: translateX(34px);
+  opacity: 0;
+  transition: transform 760ms cubic-bezier(0.22, 1, 0.36, 1), opacity 0ms linear !important;
+}
+
+/* =========================================
+   REGISTER AKTIF
+========================================= */
+
+.auth-slider.show-register .login-panel {
+  z-index: 1;
+}
+
+.auth-slider.show-register .login-panel .auth-only-layout {
+  transform: translateX(-34px);
+  opacity: 0;
+  transition: transform 760ms cubic-bezier(0.22, 1, 0.36, 1), opacity 0ms linear !important;
+}
+
+.auth-slider.show-register .register-panel {
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.auth-slider.show-register .register-panel .auth-only-layout {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 720px) {
+  .auth-panel {
+    align-items: center;
+  }
+
+  .auth-only-layout {
+    padding: 24px 18px;
+  }
+
+  .auth-only-layout .form-section {
+    max-width: 100%;
+  }
+}
