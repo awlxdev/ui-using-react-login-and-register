@@ -1,16 +1,109 @@
-# React + Vite
+﻿# UI Using React - Login and Register
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern and responsive Login and Register user interface built with React.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Login Page
 
-## React Compiler
+![Login Page](./public/images/login.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Register Page
 
-## Expanding the Oxlint configuration
+![Register Page](./public/images/register.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Features
+
+- Modern Login interface
+- Registration interface
+- Responsive layout
+- Password visibility toggle
+- Form input icons
+- Animated wave background
+- Modern visual effects and styling
+
+## Built With
+
+- React
+- Vite
+- JavaScript
+- CSS3
+- HTML5
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have installed:
+
+- Node.js
+- npm
+
+### Installation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/awlxdev/ui-using-react-login-and-register.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd ui-using-react-login-and-register
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```text
+login-part1/
+├── public/
+│   ├── images/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   ├── component/
+│   ├── components/
+│   ├── styles/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Repository
+
+GitHub: https://github.com/awlxdev/ui-using-react-login-and-register
+
+## License
+
+This project is licensed under the MIT License.
+See the [LICENSE](./LICENSE) file for details.
+
+---
+
+Developed by **awlxdev**.
